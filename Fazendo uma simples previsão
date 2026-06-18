@@ -1,0 +1,10 @@
+novo_dado = pd.DataFrame({
+    'temperatura':[32],
+    'chuva':[15],
+    'umidade':[85],
+    'mes':[12]
+})
+
+previsao = modelo.predict(novo_dado)
+
+print("Casos previstos:", previsao[0])
