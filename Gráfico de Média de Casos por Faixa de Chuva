@@ -1,0 +1,21 @@
+dados['faixa_chuva'] = pd.cut(
+    dados['chuva'],
+    bins=5
+)
+
+media_chuva = dados.groupby(
+    'faixa_chuva',
+    observed=False
+)['casos'].mean()
+
+plt.figure(figsize=(8,5))
+media_chuva.plot(kind='bar')
+
+plt.title('Média de Casos por Faixa de Chuva')
+plt.xlabel('Faixa de Chuva')
+plt.ylabel('Média de Casos')
+
+plt.xticks(rotation=45)
+plt.tight_layout()
+
+plt.show()
