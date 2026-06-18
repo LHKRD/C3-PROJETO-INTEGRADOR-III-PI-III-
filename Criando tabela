@@ -1,0 +1,7 @@
+dados = pd.merge(
+    dengue,
+    clima[['data', 'umidade']],
+    on='data'
+)
+
+dados.head()
