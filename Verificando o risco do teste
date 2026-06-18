@@ -1,0 +1,10 @@
+casos_previstos = previsao[0]
+
+if casos_previstos < 30:
+    risco = "BAIXO"
+elif casos_previstos < 60:
+    risco = "MÉDIO"
+else:
+    risco = "ALTO"
+
+print(f"Risco de surto: {risco}")
