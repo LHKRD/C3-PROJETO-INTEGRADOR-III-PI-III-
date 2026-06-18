@@ -1,0 +1,21 @@
+dados['faixa_temperatura'] = pd.cut(
+    dados['temperatura'],
+    bins=5
+)
+
+media_temp = dados.groupby(
+    'faixa_temperatura',
+    observed=False
+)['casos'].mean()
+
+plt.figure(figsize=(8,5))
+media_temp.plot(kind='bar')
+
+plt.title('Média de Casos por Faixa de Temperatura')
+plt.xlabel('Faixa de Temperatura')
+plt.ylabel('Média de Casos')
+
+plt.xticks(rotation=45)
+plt.tight_layout()
+
+plt.show()
