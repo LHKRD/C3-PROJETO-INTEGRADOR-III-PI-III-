@@ -1,0 +1,12 @@
+comparacao = pd.DataFrame({
+    'Modelo': [
+        'Random Forest',
+        'Regressão Linear'
+    ],
+    'RMSE': [
+        rmse,
+        rmse_linear
+    ]
+})
+
+print(comparacao)
