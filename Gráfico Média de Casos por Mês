@@ -1,0 +1,7 @@
+casos_mes = dados.groupby('mes')['casos'].mean()
+
+plt.figure(figsize=(8,5))
+casos_mes.plot(kind='bar')
+plt.title('Média de Casos por Mês')
+plt.ylabel('Casos')
+plt.show()
