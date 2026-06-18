@@ -1,0 +1,10 @@
+cenarios = pd.DataFrame({
+    'temperatura': [22, 25, 39, 35],
+    'chuva': [5, 10, 20, 35],
+    'umidade': [50, 60, 70, 50],
+    'mes': [6, 8, 10, 12]
+})
+
+cenarios['casos_previstos'] = modelo.predict(cenarios)
+
+print(cenarios)
